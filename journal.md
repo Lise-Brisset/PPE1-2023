@@ -71,4 +71,4 @@ Il est possible aussi d'ajouter des tag avec la commande :
 [-a] [-m message] : permet d'ajouter un message
 <tagname> : pour donner un nom au nouveau tag
 [commit] : pour indiquer le commit en particulier que nous souhaitons modifier, autrement c'est tous les derniers commit qui seront pris en compte. 
-*
+
