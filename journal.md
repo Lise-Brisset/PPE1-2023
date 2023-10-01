@@ -40,20 +40,21 @@ Lors de cette séance nosu avons revue les éléments de chemins sur le terminal
 
 Lors de ce cours nous avons pour la première fois appris à créer une clé privé/ public de sécurité que nous avons lié à notre compte github afin de mieux protéger nos données à chaque ajout sur ce dernier. 
 Nous avons choisi de créer une clé de type ed25519 car elle a moins de chance d'être hackée que la clé de type RSA par exemple. 
-La commande pour créer la clé est 
-	ssh-keygen -t ed25519
-La création de la clé va créer un ficheir sur notre utilisateur, on va y ajotuer un mot de passe pour plus de sécurisaiton. 
-Pour vérifier que la clé tourne bien : 
- 	eval "$(ssh-agent -s)"
-Pour lié l'agent à la clé : 
-	ssh-add ~/.ssh/id_ed25519
-Pour prendre la clé publique et la mettre sur github : 
-	cat .ssh/id_ed25519.pub
+
+La commande pour créer la clé est : ssh-keygen -t ed25519
+
+La création de la clé va créer un fichier sur notre utilisateur, on va y ajotuer un mot de passe pour plus de sécurisaiton. 
+
+Pour vérifier que la clé tourne bien : eval "$(ssh-agent -s)"
+
+Pour lié l'agent à la clé : ssh-add ~/.ssh/id_ed25519
+
+Pour prendre la clé publique et la mettre sur github : cat .ssh/id_ed25519.pub
+
 On a copié la clé qui s'est affichée et sur github : profil>Settings>SSH ans GPG keys > New SSH key : on colle la nouvelle clé et on lui donne un nom puis nous validons. 
 
 Dans une seconde partie du cours, nous avons vu comment lancer des commandes sur git depuis le terminal.
-Voici la syntaxe des commandes git : 
-	git <sous-commande> [-options…] [arguments…]
+Voici la syntaxe des commandes git : git <sous-commande> [-options…] [arguments…]
 
 Voici les commandes les plus importantes : 
 - git add <file> : pour indiquer les fichiers que nous voulons ajouter
