@@ -75,3 +75,5 @@ Il est possible aussi d'ajouter des tag avec la commande :
 
 Ceci est une phrase eronée.
 
+
+## Séance du 4 octobre
