@@ -127,11 +127,11 @@ Nous avons ensuite vu le généralité sur les flux de données. Voici les comma
 
 La commande wc permet de compter dans l'ordre respestif le nombre de lignes, le nombre de mots et le nombre de caractères.
 Voici les commandes permettant de moduler la direction des flux : 
-- < : envoie les données du fichiers suivant dans le terminal
-- > : envoie les données dans le fichier suivant (attention, ceci écrase le données du fichier existant)
-- 2> : envoie l'erreur dans l'output
-- >& : envoie l'erreur et le résultat dans l'output
-- >> : envoie les données dans le fichier suivant sans écraser ce qui existe déjà.
+- "<" : envoie les données du fichiers suivant dans le terminal
+- ">": envoie les données dans le fichier suivant (attention, ceci écrase le données du fichier existant)
+- "2>" : envoie l'erreur dans l'output
+- ">&" : envoie l'erreur et le résultat dans l'output
+- ">>" : envoie les données dans le fichier suivant sans écraser ce qui existe déjà.
 
 Nous avons ensuite vu la redirection entre les commandes. C'est à dire qu'il est possible d'imbriquer les commandes les unes dansles autres afin d'exécuter une suite de commande sur une ligne et avoir seulement le résutlat final.
 Ceci se fait grâce au caractère pipe | et prend la forme suivante : 
@@ -145,9 +145,9 @@ Nous avons ensuite commencé l'exercice sur les commandes imbriquées. Ce dernie
 - echo : affiche du texte
 
 Nosu avons fini sur une introduction aux scripts bash. Ces dernier sont sous l'extension script.sh. Voici les éléments à connaitre sur les scripts bash : 
-- # : permet d'écrire un commentaire
-- #!/usr/bin/bash : indispensable au début du script pour indiquer à la machine qu'il s'agit d'un fichier script bash
-- chmod +x <nom_script.sh> : à entrer dans le terminal afin de rendre le fichier exécutable.
+- "#" : permet d'écrire un commentaire
+- "#!/usr/bin/bash" : indispensable au début du script pour indiquer à la machine qu'il s'agit d'un fichier script bash
+- "chmod +x <nom_script.sh>" : à entrer dans le terminal afin de rendre le fichier exécutable.
 - les variables, ex : chat="miaou"
 - les arguments, ex : $1, $2, $3, etc.
 Pour faire appel à un scrip, après l'avoir rendu exécutable, utiliser la commande : 
