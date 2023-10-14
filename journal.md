@@ -115,23 +115,23 @@ J'ai donc après plusieurs tentatives, décidé de cloner mon git SSH sur le dis
 
 Lors de cette séance nous avons commencé par faire une correction des exercices sur l'utilisation de git reset et git revert.
 Voici ce qui est à retinir : 
-	- git push : envoie les données de mon ordinateur vers le serveur
-	- git pull : vient télécharger les données du serveur vers mon ordinateur
-	- git revert : vient prendre le commit selectionné et le jette, on annule complètement le commit
-	- git reset : revient en arrière dans le temps à travers les commits, en parcourant tout le chemin.
+- git push : envoie les données de mon ordinateur vers le serveur
+- git pull : vient télécharger les données du serveur vers mon ordinateur
+- git revert : vient prendre le commit selectionné et le jette, on annule complètement le commit
+- git reset : revient en arrière dans le temps à travers les commits, en parcourant tout le chemin.
 	
 Nous avons ensuite vu le généralité sur les flux de données. Voici les commandes les plus importante à connaitre : 
-	- stdin : entrée où l'on rentre les données (par défaut el clavier)
-	- stdout : sortie où s'affiche les données (par défaut l'écran)
-	- stderr : sortie pour les erreurs (par défaut l'écran).
+- stdin : entrée où l'on rentre les données (par défaut el clavier)
+- stdout : sortie où s'affiche les données (par défaut l'écran)
+- stderr : sortie pour les erreurs (par défaut l'écran).
 
 La commande wc permet de compter dans l'ordre respestif le nombre de lignes, le nombre de mots et le nombre de caractères.
 Voici les commandes permettant de moduler la direction des flux : 
-	- < : envoie les données du fichiers suivant dans le terminal
-	- > : envoie les données dans le fichier suivant (attention, ceci écrase le données du fichier existant)
- 	- 2> : envoie l'erreur dans l'output
-	- >& : envoie l'erreur et le résultat dans l'output
-	- >> : envoie les données dans le fichier suivant sans écraser ce qui existe déjà.
+- < : envoie les données du fichiers suivant dans le terminal
+- > : envoie les données dans le fichier suivant (attention, ceci écrase le données du fichier existant)
+- 2> : envoie l'erreur dans l'output
+- >& : envoie l'erreur et le résultat dans l'output
+- >> : envoie les données dans le fichier suivant sans écraser ce qui existe déjà.
 
 Nous avons ensuite vu la redirection entre les commandes. C'est à dire qu'il est possible d'imbriquer les commandes les unes dansles autres afin d'exécuter une suite de commande sur une ligne et avoir seulement le résutlat final.
 Ceci se fait grâce au caractère pipe | et prend la forme suivante : 
@@ -139,17 +139,17 @@ Ceci se fait grâce au caractère pipe | et prend la forme suivante :
 	--> renvoie en sortie l'erreur et le résultat
 
 Nous avons ensuite commencé l'exercice sur les commandes imbriquées. Ce dernier nous a permis aussi d'utiliser les commandes suivantes : 
-	- grep : rechercher un motif dans l'entrée
-	- sort : trier les lignes
-	- uniq : supprimer les doublons
-	- echo : affiche du texte
+- grep : rechercher un motif dans l'entrée
+- sort : trier les lignes
+- uniq : supprimer les doublons
+- echo : affiche du texte
 
 Nosu avons fini sur une introduction aux scripts bash. Ces dernier sont sous l'extension script.sh. Voici les éléments à connaitre sur les scripts bash : 
-	- # : permet d'écrire un commentaire
-	- #!/usr/bin/bash : indispensable au début du script pour indiquer à la machine qu'il s'agit d'un fichier script bash
-	- chmod +x <nom_script.sh> : à entrer dans le terminal afin de rendre le fichier exécutable.
-	- les variables, ex : chat="miaou"
-	- les arguments, ex : $1, $2, $3, etc.
+- # : permet d'écrire un commentaire
+- #!/usr/bin/bash : indispensable au début du script pour indiquer à la machine qu'il s'agit d'un fichier script bash
+- chmod +x <nom_script.sh> : à entrer dans le terminal afin de rendre le fichier exécutable.
+- les variables, ex : chat="miaou"
+- les arguments, ex : $1, $2, $3, etc.
 Pour faire appel à un scrip, après l'avoir rendu exécutable, utiliser la commande : 
 	bash <nom_scritp.md> <argument1> <arguement2> <arguement3> <etc>
 	
