@@ -1,0 +1,73 @@
+Location en 2016 : 
+3144
+Location en 2017 : 
+2466
+Location en 2018 : 
+3110
+Classement des lieux les plus cités : 
+Classement des lieux les plus cités en 2016 : 
+    247 France
+    130 Burundi
+    105 Rio
+     82 Paris
+     73 États-Unis
+     47 Syrie
+     41 Russie
+     39 Allemagne
+     37 Canada
+     35 Montpellier
+Classement des lieux les plus cités en 2017 : 
+    282 France
+     79 États-Unis
+     50 Syrie
+     50 Paris
+     37 Turquie
+     36 Russie
+     35 Italie
+     28 Irak
+     26 Europe
+     24 Royaume-Uni
+Classement des lieux les plus cités en 2018 : 
+    174 France
+    165 Paris
+     76 Champs-Élysées
+     37 États-Unis
+     36 Russie
+     28 A9
+     24 A7
+     22 A8
+     21 Strasbourg
+     21 A62
+Les annontations les plus fréquentes pour le mois de février 2016 : 
+      7 Location 0 6
+      4 Location 0 7
+      3 Date 62 77
+      2 Person 200 214
+      2 Location 49 54
+      2 Location 285 291
+      2 Location 0 9
+      2 Location 0 5
+      2 Date 67 82
+      2 Date 50 64
+Les annontations les plus fréquentes pour le mois de février 2017 : 
+     22 Location 0 6
+      6 Location 0 10
+      4 Date 58 73
+      3 Person 9 15
+      2 Person 945 960
+      2 Location 0 7
+      2 Location 0 5
+      2 Date 91 106
+      2 Date 80 94
+      2 Date 69 85
+Les annontations les plus fréquentes pour le mois de février 2018 : 
+      6 Event 0 20
+      6 Date 16 20
+      5 Location 0 6
+      3 Date 56 71
+      2 Location 414 420
+      2 Date 86 101
+      2 Date 81 96
+      2 Date 67 82
+      2 Date 162 172
+      1 Product 965 973
