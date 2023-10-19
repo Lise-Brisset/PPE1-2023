@@ -235,6 +235,7 @@ Voici aussi deux commandes qui seront utilent à notre projet :
 
 
 # Point sur le projet :
-Nous hésitions entre plusieurs termes comme "écologie", "culture". Mais nous pensons choisir finalement le terme "santé" car ce dernier peut ouvrir à une discussion autour de la perception de la santé physique, mentale et/ou psychologique en fonction des langues et donc des mentalités et priorités de chaque type de locuteur.
+Nous hésitions entre plusieurs termes comme "écologie", "culture". Mais nous pensons choisir finalement le terme "santé" car ce dernier peut ouvrir à une discussion autour de la perception de la santé physique, mentale et/ou psychologique en fonction des langues et donc des mentalités et priorités de chaque type de locuteur. De plus le terme "culture" a déjà été traiter dans les années précédentes, donc nous trouvions plus intéressant de faire un mot qui n'a pas encore été choisi dans ce cours.
 Nos langues sont les suivantes : le français, l'ukrainien et le chinois.
-Ces trois langues sont bien oposé de par leur localisation, la culture de chaque groupe de locuteurs. Le mot "santé" peut donc ressortir et mettre en avant des utilisations différentes en fonction des langues. Il est donc interessant de venir mettre en comparaison ceci.
+Ces trois langues sont bien oposées de par leur localisation, la culture de chaque groupe de locuteurs. Le mot "santé" peut donc ressortir et mettre en avant des utilisations différentes en fonction des langues. Il est donc interessant de venir mettre en comparaison ceci.
+Voici le document calc partagé sur lequel nous collectons nos liens : https://docs.google.com/spreadsheets/d/118GdMKBAtoeMK5x9or71w-0pbWMkHkoaSMmy-oIViuE/edit?usp=sharing
