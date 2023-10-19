@@ -103,15 +103,17 @@ Pendant une seconde partie du cours, nous avons commencé la feuille d'exercice 
 
 Les dernières 30 min ont été consacrées à la présentation de ce qui est attendu pour le projet final.
 
-Mon groupe est composée de Solomiia et Natalia.
-
 
 Concernant les exercices, j'ai rencontré des problèmes, lorsque je revenais en arrière sur mes versions, il m'était impossible de push les modifications car tous mes fichiers étaient affichés comme modifiés.
 J'ai donc après plusieurs tentatives, décidé de cloner mon git SSH sur le disque dur qui n'est pas partagé avec mon dualboot Windows. Ce dernier pourrait être à l'origine des problèmes rencontrées.
 
+
+# Point sur le projet :
+Mon groupe est composé de Solomiia et Natalia.
+
 	
 
-## Séance du 4 octobre
+## Séance du 11 octobre
 
 Lors de cette séance nous avons commencé par faire une correction des exercices sur l'utilisation de git reset et git revert.
 Voici ce qui est à retinir : 
@@ -161,17 +163,78 @@ Remarques :
 	
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+## Séance du 18 octobre
+
+Lors de cette séance nous avons commencé par la correction des exercices sur les scripts de la semaine dernière.
+
+Nous avons ensuite vu les instructions conditionnelles comme if, for et while utiles dans les scripts bash :
+- if : sous la forme
+					if [ condition ]
+					then
+						echo "condition valide"
+					else
+						echo "condition non valide"
+					fi
+	Le else est facultatif tandis que le then ne l'est pas.
+	"Si la condition est vraie alors je fais ça, autrement je fais ça."
+
+- for : sous la forme
+					N=0
+					for ELEMENT in a b c d e
+					do
+						N=$(expr $N + 1)
+						echo "Le $N ieme element est $ELEMENT"
+					done
+	"On vient parcourir tous les éléments de la liste un par un et on lui applique des evenements."
+
+- while : sous la forme
+					while [ condition ]
+					do
+						echo "je continue à boucler";
+					done
+	"Tant que la condition n'est pas atteinte la boucle continue à tourner."
+	A noter que le point virgule n'est pas toujours obligatoire mais il est bien de prendre l'habitude de le mettre car il est souvent source d'erreur.
+
+Les conditions portent sur l'argument, qui est soit le chemin, soit une chaine de caractères, soit un entier numérique. L'objectif est de vérifié si la condition est vraie. Voici la liste des conditions qui peuvent être appliquées :
+- "-f nom_fichier": vérifier que le fichier existe
+- "-d nom_dossier": vérifier que le dossier existe
+- "-s nom_fichier": vérifier que le fichier existe et n’est pas vide
+- "= ou !=" : vérifie si les chaines sont égales ou différentes
+- "< ou > : vérifie si une chaîne est avant ou après une autre dans l’ordre alphabétique
+- "-n chaine" : vérifie si la chaine n'est pas vide
+- "-z" : vérifie si la chaine est vide
+- "a -eq b" : equal
+- "a -ne b" : not equal
+- "a -lt b" : less than
+- "a -gt b" : greater than
+- "a -le b" : less or equal
+- "a -ge b" : greater or equal.
+
+Nous avons ensuite vu ce qu'était un document HTML :
+- head
+- body
+- balises
+- éléments de texte dans balises.
+
+Nous avons vu la nomenclature des codes HTTP :
+- 1xx : information
+- 2xx : réussite
+- 3xx : redirection
+- 4xx : erreur du client
+- 5xx : erreur du serveur.
+Dans le cadre du projet nous allons aspirer le contenu HTML de pages webs et en fonction de la réussite nous aurons un code comme ci-dessus.
+
+Pour lire le contenu des pages HTML sur le terminal, nous utilisons Lynx.
+ex : "lynx plurital.org"
+
+Pour récuperer le contenu de la page : "lynx -dump plurital.org". Pour retirer les liens : "lynx -dump -nolist plurital.org".
+
+Voici aussi deux commandes qui seront utilent à notre projet :
+- wget : écrit dans un fichier
+- curl : écrit sur la sortie standard.
+
+
+# Point sur le projet :
+Nous hésitions entre plusieurs termes comme "écologie", "culture". Mais nous pensons choisir finalement le terme "santé" car ce dernier peut ouvrir à une discussion autour de la perception de la santé physique, mentale et/ou psychologique en fonction des langues et donc des mentalités et priorités de chaque type de locuteur.
+Nos langues sont les suivantes : le français, l'ukrainien et le chinois.
+Ces trois langues sont bien oposé de par leur localisation, la culture de chaque groupe de locuteurs. Le mot "santé" peut donc ressortir et mettre en avant des utilisations différentes en fonction des langues. Il est donc interessant de venir mettre en comparaison ceci.
