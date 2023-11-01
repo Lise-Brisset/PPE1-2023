@@ -108,7 +108,7 @@ Concernant les exercices, j'ai rencontré des problèmes, lorsque je revenais en
 J'ai donc après plusieurs tentatives, décidé de cloner mon git SSH sur le disque dur qui n'est pas partagé avec mon dualboot Windows. Ce dernier pourrait être à l'origine des problèmes rencontrées.
 
 
-# Point sur le projet :
+### Point sur le projet :
 Mon groupe est composé de Solomiia et Natalia.
 
 	
@@ -234,7 +234,7 @@ Voici aussi deux commandes qui seront utilent à notre projet :
 - curl : écrit sur la sortie standard.
 
 
-# Point sur le projet :
+### Point sur le projet :
 Nous hésitions entre plusieurs termes comme "écologie", "culture". Mais nous pensons choisir finalement le terme "santé" car ce dernier peut ouvrir à une discussion autour de la perception de la santé physique, mentale et/ou psychologique en fonction des langues et donc des mentalités et priorités de chaque type de locuteur. De plus le terme "culture" a déjà été traiter dans les années précédentes, donc nous trouvions plus intéressant de faire un mot qui n'a pas encore été choisi dans ce cours.
 Nos langues sont les suivantes : le français, l'ukrainien et le chinois.
 Ces trois langues sont bien oposées de par leur localisation, la culture de chaque groupe de locuteurs. Le mot "santé" peut donc ressortir et mettre en avant des utilisations différentes en fonction des langues. Il est donc interessant de venir mettre en comparaison ceci.
@@ -254,7 +254,7 @@ Nous avons commencé pendant la suite du cours par nous entrainer sur un minipro
 Pour celà, il nous était demandé de récupérer le urls du fichier fr.txt et d'appliquer un traitement dessus avec un script bash miniprojet.sh, dans lequel nous renvoyons les informations sous forme de tableau avec des tabulations.
 
 
-# Point sur le projet :
+### Point sur le projet :
 Pour notre projet, nous souhaitons toujours travailler sur le mot "santé" (en français), "Здоров'я" (en ukrainien) et "健康" (en chinois).
 Effectivement, ce terme est très interessant à traiter car la santé est un terme faisant référence à plusieurs sens ou sous-sens comme la santé physique, la santé morale, le sysnonyme d'être en forme, santé publique générale ou santé personnelle.
 Nous pouvons nous attendre par exemple en français à retrouver le mot santé dans un contexte de santé physique et psychologique, bien être personnel ou santé publique. Bien qu'en chinois, nous pouvons d'autant plus nous attendre à la santé psychique et physique. En ukrainien, nous émettons l'hypothèse de trouver plutôt des informations venant du gouvernement et des nouvelles à propos du Covid-19.
@@ -263,7 +263,7 @@ Nous avons déjà bien avancé dans la recherche de nos urls. Ces dernières s'o
 Dans la santé nous pouvons aussi nous interesser à ses innovations, aux dernières technologies qui s'installent.
 
 
-# Concernant le miniprojet :
+### Concernant le miniprojet :
 Je n'ai pas réussi à comprendre comment régler le code HTTP 301 qui s'affiche et pour lequel nous devrions afficher le code HTTP de l'url de redirection.
 Concernant l'encodage, lorsque j'ai voulu ajouter des conditions avec "if" pour indiquer l'encodage s'il est présent, cette dernière m'a posé problème en m'indiquant que le "do" ne devrait pas être là. Hors si je retire le "do", je ne sais pas comment indiquer le fichier d'entrée autrement qu'avec la ligne "done < "../urls $fichierURL";".
 Dans ces conditions, le programme se lance mais n'affiche que les lignes des urls qui ont un code HTTP 200.
