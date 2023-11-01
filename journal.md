@@ -239,3 +239,33 @@ Nous hésitions entre plusieurs termes comme "écologie", "culture". Mais nous p
 Nos langues sont les suivantes : le français, l'ukrainien et le chinois.
 Ces trois langues sont bien oposées de par leur localisation, la culture de chaque groupe de locuteurs. Le mot "santé" peut donc ressortir et mettre en avant des utilisations différentes en fonction des langues. Il est donc interessant de venir mettre en comparaison ceci.
 Voici le document calc partagé sur lequel nous collectons nos liens : https://docs.google.com/spreadsheets/d/118GdMKBAtoeMK5x9or71w-0pbWMkHkoaSMmy-oIViuE/edit?usp=sharing
+
+
+
+## Séance du 25 octobre
+
+Lors de cette séance nous nous sommes penchés sur le début de la constitution de notre projet. Pour celà nous avons vu des exemples de ce qu'attendre les professeurs de nous et de comment y parvenir par étapes.
+
+Voici les étapes de notre projet : choisir le mot (un terme polysémique et d'autant plus interessant à analyser); réunir les urls des sites où ce termes apparait dans les trois langues; construire un tableau qui contiendra tous les éléments que nous avons besoin afin de traiter et nettoyer correctement les contenus de nos pages (il est important par exemple que nos pages soient toutes sous le même encodage, UTF-8, afin de venir placer tout le texte dans un même fichier); trouver le code HTTP de chacune de nos urls afin de s'assurer qu'elles sont consultables dans notre terminal.
+
+Nous verrons plus tard d'autres étapes telles que dump-html, dump-text, les occurrences, les contextes et les concordances.
+
+Nous avons commencé pendant la suite du cours par nous entrainer sur un miniprojet permettant de nous évaluer chacun sur notre capacité à débuter le projet seul.
+Pour celà, il nous était demandé de récupérer le urls du fichier fr.txt et d'appliquer un traitement dessus avec un script bash miniprojet.sh, dans lequel nous renvoyons les informations sous forme de tableau avec des tabulations.
+
+
+# Point sur le projet :
+Pour notre projet, nous souhaitons toujours travailler sur le mot "santé" (en français), "Здоров'я" (en ukrainien) et "健康" (en chinois).
+Effectivement, ce terme est très interessant à traiter car la santé est un terme faisant référence à plusieurs sens ou sous-sens comme la santé physique, la santé morale, le sysnonyme d'être en forme, santé publique générale ou santé personnelle.
+Nous pouvons nous attendre par exemple en français à retrouver le mot santé dans un contexte de santé physique et psychologique, bien être personnel ou santé publique. Bien qu'en chinois, nous pouvons d'autant plus nous attendre à la santé psychique et physique. En ukrainien, nous émettons l'hypothèse de trouver plutôt des informations venant du gouvernement et des nouvelles à propos du Covid-19.
+
+Nous avons déjà bien avancé dans la recherche de nos urls. Ces dernières s'orientent plutôt vers des sites officiels sur la santé comme le site santepubliquefrance.fr, ou des sites d'informations sur les nouvelles autour de la santé comme www.lemonde.fr rubrique santé, ou encore des forums de questionnement autour de la santé.
+Dans la santé nous pouvons aussi nous interesser à ses innovations, aux dernières technologies qui s'installent.
+
+
+# Concernant le miniprojet :
+Je n'ai pas réussi à comprendre comment régler le code HTTP 301 qui s'affiche et pour lequel nous devrions afficher le code HTTP de l'url de redirection.
+Concernant l'encodage, lorsque j'ai voulu ajouter des conditions avec "if" pour indiquer l'encodage s'il est présent, cette dernière m'a posé problème en m'indiquant que le "do" ne devrait pas être là. Hors si je retire le "do", je ne sais pas comment indiquer le fichier d'entrée autrement qu'avec la ligne "done < "../urls $fichierURL";".
+Dans ces conditions, le programme se lance mais n'affiche que les lignes des urls qui ont un code HTTP 200.
+Je n'ai pas mis le résutlat en sortie dans un document HTML car nous n'avons pas encore abordé ce point en classe.
+Les premières étapes du miniprojet fonctionnaient correctement car chaque url était dans un tableau avec une numoration et le code HTTP, le tout séparé de tabulation. Cependant depuis l'ajout de la condition "if" pour ajouter l'encodage, le script ne fonctionne plus correctement et ne renvoie plus le tableau.
