@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#lignes permettant la vérifications des arguments : 
 if [ $# -ne 2 ]
 then
 	echo "deux argument attendu exactement"
@@ -17,17 +18,20 @@ else
 	fi
 fi
 
-
+#construction des variables utile dans la construction de notre tableau, les arguments sont le fichier texte d'urls et le fichier html du tableau : 
 URLS=$1
 lineno=1
 tableau=$2
 
-
+#construction du début du fichier html avec les métadonnées : 
 echo "<html>
+	<head>
+		<head charset="UTF-8"/>
+	</head>
 	<body>
 		<table>" > ../tableaux/$tableau
 
-
+#remplissage du tableau html : 
 while read -r URL
 do
 	reponse=$(curl -s -I -L -w "%{http_code}" -o /dev/null $URL)
@@ -36,7 +40,7 @@ do
 	lineno=$(expr $lineno + 1)
 done < ../urls/$URLS
 
-
+#fermetures du tableau avec les balises fermantes html : 
 echo " 		</table>
 	</body>
 </html>" >> ../tableaux/$tableau
