@@ -1,37 +1,43 @@
 #!/usr/bin/env bash
 
-if [ $# -ne 1 ]
+if [ $# -ne 2 ]
 then
-	echo "Un argument attendu exactement"
+	echo "deux argument attendu exactement"
 	exit
 else
-	if [ -f ../urls/$1 ]
+	if [ -f $1 ]
 	then
-		echo "on bien un fichier"
-	else
-		echo "le fichier n'existe pas"
-		exit
+		if [ -f $2 ]
+		then
+			echo "on bien deux fichiers existants"
+		else
+			echo "le fichier n'existe pas"
+			exit
+		fi
 	fi
 fi
 
-fichierURL=$1
-lineno=0
 
-while read -r line;
-code=$(curl -i -s ${line} | egrep "HTTP/[[:digit:]](\.[[:digit:]])?\s*[[:digit:]]{3}")
-encodage=$(curl -i -s ${line} | egrep "charset")
+URLS=$1
+lineno=1
+tableau=$2
 
-if [ -n $encodage ]
-then
-	do
-		echo -e ${lineno} "\t" ${line} "\t" $code "\t" $encodage
-		lineno=$(expr ${lineno} + 1)
-	done < "../urls/$fichierURL";
-else
-	if [ -z $encodage ]
-		do
-			echo -e ${lineno} "\t" ${line} "\t" $code "\t" "NON CONNU"
-			lineno=$(expr ${lineno} + 1)
-		done < "../urls/$fichierURL";
-	fi
-fi
+
+echo "<html>
+	<body>
+		<table>" > ../tableaux/$tableau
+
+
+while read -r URL
+do
+	reponse=$(curl -s -I -L -w "%{http_code}" -o /dev/null $URL)
+	encodage=$(curl -s -I -L -w "%{content_type}" -o /dev/null $URL | grep -P -o "charset=\S+" | cut -d"=" -f2 | tail -n 1)
+	echo "				<tr><th>$lineno</th><td>$URL</td><td>$reponse</td><td>$encodage</td></tr>" >> ../tableaux/$tableau
+	lineno=$(expr $lineno + 1)
+done < ../urls/$URLS
+
+
+echo " 		</table>
+	</body>
+</html>" >> ../tableaux/$tableau
+
