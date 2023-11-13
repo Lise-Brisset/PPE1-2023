@@ -269,3 +269,58 @@ Concernant l'encodage, lorsque j'ai voulu ajouter des conditions avec "if" pour 
 Dans ces conditions, le programme se lance mais n'affiche que les lignes des urls qui ont un code HTTP 200.
 Je n'ai pas mis le résutlat en sortie dans un document HTML car nous n'avons pas encore abordé ce point en classe.
 Les premières étapes du miniprojet fonctionnaient correctement car chaque url était dans un tableau avec une numoration et le code HTTP, le tout séparé de tabulation. Cependant depuis l'ajout de la condition "if" pour ajouter l'encodage, le script ne fonctionne plus correctement et ne renvoie plus le tableau.
+
+
+
+
+## Séance du 8 novembre
+
+Pendant cette séance de cours, nous avons commencé par la correction de la première partie du miniprojet. Nous avons ensuite vu des notions de bases en HTML et comment former un tableau en HTML.
+
+Voici les éléments que nous pouvons retenir de la correction : 
+- while read -r URL : permet de lire ligne par ligne ;
+- -l : permet de n'avoir que les headers ;
+- s : mode silencieux ;
+- grep -P : expression régulière de perl ;
+- grep -o : n'affiche que ce qui a matché avec la recherche ;
+- curl -w : right out, récupère certaines données spécifiques, ex “%{http_code}” ;
+- curl -o : indique le fichier de sorti (généralement /dev/null ;
+- curl -L : suivre les redirections sinon reste sur le page de base ;
+- \S : caractère de non-espace ;
+- cut : permet de couper un fichier tabulaire ;
+- cut -f : pour indiquer une certaine colonne ;
+- cut -d : utilise le délimiteur indiqué au lieu de la tabulation ;
+
+Pour les erreurs 301 : on peut venir rediriger vers la bonne adresse.
+Pour les erreurs 404 : soit on trouver l'erreur dans l'url ou la remplacer.
+Pour les erreurs 500 : on ne peut rien y faire car le problème vient du serveur.
+
+Point sur HTML : 
+- HyperText Markup Langage ;
+- Langage avec balises qui peut être lu dans un navigateur ;
+- proche d'XML : marquage des zones textuelles, structuration du texte, métatexte et métadonnées ;
+- structure avec imbrication mais pas d'enchassement ;
+- les balises : <balise ouvrante> </balise_fermante> <balise_auto_fermante/> ;
+- contient un head (métadonnées) et un body (structure textuelle) ;
+
+Un tableau html est construit de la sorte : 
+<html>
+	<body>
+		<table>
+			<tr><th>1</th><td>https://……</td><td>200</td><td>UTF-8</td></tr>
+			<tr><th>1</th><td>https://……</td><td>200</td><td>UTF-8</td></tr>
+			[.....]
+		</table>
+	</body>
+</html>
+--> Les balises ne s'affichent pas à cause à cause du format MarkDown.
+
+
+###Point sur le projet : 
+J'ai remarqué qu'en appliquant mes urls du français au script du miniprojet, j'ai 3 urls avec un code http 200 qui n'ont pas l'information de l'encodage, 4 erreur 400, 4 erreur 500 et 2 code html indiqué "000". Je vais donc observer pourquoi certains encodages ne s'affichent pas et changer les urls dans le cas des erreurs 400 et 500. Les 4 erreurs 503 proviennent du même site www.sentepubliquefrance.fr .
+
+
+###A propos de l'exercice supplémentaire : 
+Je suis restée bloquée au premier exercice car je n'ai pas réussi à mettre les mots ligne par ligne. Pour cela j'ai voulu utiliser la commande tr " " "\n" < resultat.txt afin de changer les espaces en sauts de ligne. Avant ceci j'ai effectué le nettoyage des ponctuations et nombres avec la commande tr "([[:digit:]]+|[[:punct:]]+|[|]|Â«|Â»|â€”)" " " < $texte . 
+Afin de venir compter les occurences de chaque mot j'ai voulu utiliser une boucle while et la commande " grep $mot | sort -nr " ; mais comme ma segmentation lors de l'exercice précèdent n'a pas été concluante, ce script ne fonctionne pas. 
+
