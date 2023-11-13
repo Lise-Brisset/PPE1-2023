@@ -316,11 +316,11 @@ Un tableau html est construit de la sorte :
 --> Les balises ne s'affichent pas à cause à cause du format MarkDown.
 
 
-###Point sur le projet : 
+### Point sur le projet : 
 J'ai remarqué qu'en appliquant mes urls du français au script du miniprojet, j'ai 3 urls avec un code http 200 qui n'ont pas l'information de l'encodage, 4 erreur 400, 4 erreur 500 et 2 code html indiqué "000". Je vais donc observer pourquoi certains encodages ne s'affichent pas et changer les urls dans le cas des erreurs 400 et 500. Les 4 erreurs 503 proviennent du même site www.sentepubliquefrance.fr .
 
 
-###A propos de l'exercice supplémentaire : 
+### A propos de l'exercice supplémentaire : 
 Je suis restée bloquée au premier exercice car je n'ai pas réussi à mettre les mots ligne par ligne. Pour cela j'ai voulu utiliser la commande tr " " "\n" < resultat.txt afin de changer les espaces en sauts de ligne. Avant ceci j'ai effectué le nettoyage des ponctuations et nombres avec la commande tr "([[:digit:]]+|[[:punct:]]+|[|]|Â«|Â»|â€”)" " " < $texte . 
 Afin de venir compter les occurences de chaque mot j'ai voulu utiliser une boucle while et la commande " grep $mot | sort -nr " ; mais comme ma segmentation lors de l'exercice précèdent n'a pas été concluante, ce script ne fonctionne pas. 
 
