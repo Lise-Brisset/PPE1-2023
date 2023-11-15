@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-texte=$1
+FICHIER="$1"
 
-regex1=$(tr "([[:digit:]]+|[[:punct:]]+|[|]|«|»|—)" " " < $texte > resultat_regex1.txt)
+# Si non est fichier premier argument / si le premier argument n'est pas un fichier S
+if [ ! -f "$1" ]
+then
+    echo "pas de fichier donné en argument"
+    exit 1
+fi
 
-regex2=$(tr " +" " " < resultat_regex1.txt > resultat_regex2.txt)
+cat "$FICHIER" | grep -P -o "\p{Latin}+" | tr "[:upper:]" "[:lower:]" | tr "ÉÀÊ" "éàê"
 
-regex3=$(tr " " "\n" < resultat_regex2.txt)
-
-#regex3=$(egrep "([[:alpha:]]+)" resultat_regex1.txt | sed -e "\1\n")
-
-echo $regex3
