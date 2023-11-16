@@ -324,3 +324,56 @@ J'ai remarqué qu'en appliquant mes urls du français au script du miniprojet, j
 Je suis restée bloquée au premier exercice car je n'ai pas réussi à mettre les mots ligne par ligne. Pour cela j'ai voulu utiliser la commande tr " " "\n" < resultat.txt afin de changer les espaces en sauts de ligne. Avant ceci j'ai effectué le nettoyage des ponctuations et nombres avec la commande tr "([[:digit:]]+|[[:punct:]]+|[|]|Â«|Â»|â€”)" " " < $texte . 
 Afin de venir compter les occurences de chaque mot j'ai voulu utiliser une boucle while et la commande " grep $mot | sort -nr " ; mais comme ma segmentation lors de l'exercice précèdent n'a pas été concluante, ce script ne fonctionne pas. 
 
+
+
+## Séance du 15 novembre 2023
+
+Lors de cette séance nous avons corrigé les exercices supplémentaires sur les bigrammes et le mini projet, nous avons vu comment déployer une page internet depuis notre dépôt git. Puis nous avons introduit les éléments de CSS avec html.
+
+Voici les éléments à retinir de la correction des exercices :
+cat candide.txt | grep -P -o '/w+' : permet de chercher les mots dans le texte candide.txt.
+cat candide.txt | grep -P -o '/p{Latin}+' : permet de chercher les mots avec des caractères latins dans le texte candide.txt.
+“! -f "$1"” : ! permet de faire la négation.
+tr "" "" : tr permet de changer la première chaine en la deuxième.
+
+cat candide.txt | sort | uniq -c |sort -nr | head -n 4 : expression très utile et donc à retenir.
+sort -n | tail -n 3 : peut remplacer "sort -nr | head -n 4" dans l'expression précèdente.
+
+wc -l : word count.
+
+Pour faire appel à un autre script  : "bash ./nomscript.sh arg1 arg2".
+
+### Remarques :
+Je n'ai pas compris à quoi sert "_" dans l'exercice 3 dans cette partie de script :
+" #on crée la colonne 1 dans un fichier
+bash ./script_supp_exo1.sh $FICHIER > col1
+
+#on crée la colonne 2 dans un autre fichier avec "_" avant chaque mot
+echo "_" > col2
+bash ./script_supp_exo1.sh $FICHIER >> col2
+
+paste col1 col2 | sort | uniq -c |sort -nr | head -n $TOPN "
+
+
+### Création d'un site web à partir de notre dépôt git :
+Pour créer la page web depuis github :  settings > pages > deployed from a branch > main > root/ > save .
+Voici mon site : https://lise-brisset.github.io/PPE1-2023/
+
+
+### CSS et Bulma :
+CSS permet d'appliquer un style au contenu de nos pages html. Il est possible de créer des classes telles que dans la balise "class="text-red" ". Pour attribuer un style à cette classe nous pouvons créer un fichier .css et faire appel à la classe de la manière suivante :
+.text-red{
+		color:red;
+}
+
+La bibliothèque Bulma est une bibliothèque CSS qui permet d'appliquer des styles déjà définit grâce à l'utilisatio de nom de classe.
+Lien vers le site de la documentation Bulma : https://bulma.io/documentation/
+
+Dans cette bibliothèque il y a deux classes : les classes principales nommées avec un nom simple et les modifieurs commençant par is- ou has-.
+Pour faire appelle à la bibliothèque, il faut indiquer dans notre head la balise suivante :
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> .
+
+
+### Point sur le projet :
+Pour chacune de nous, sur les cinquantes liens que nous avons, une dizaine d'urls rencontre des problèmes comme un encodage qui n'est pas de l'utf-8 ou des code http 400 et 500. Pour avoir un maximum de liens exploitables pour notre projet, nous avons décidé de trouver de nouvelles urls afin de remplacer celles ne nous satisfaisant pas.
+De mon côté, j'ai à présent mes 50 urls qui sont encodées en utf-8 et avec un code http 200. J'ai pu visualiser ceci en applicant mes urls du français au script du mini projet fait en cours.
