@@ -1,45 +1,38 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>Programmation et Projet encadré</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+		<title>PPE1 MiniProjet</title>
 	</head>
 
-	<body>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Collage_of_Six_Cats-02.jpg" alt="Les chats domineront le monde." title="Les chats domineront le monde. Source de l'image : Wikipedia, licence CC BY-NC-SA 3.0" style="max-width: 50%; height: auto;">
+	<body class="content is-medium has-background-grey has-text-centered">
 
-		<h1>Entête de niveau 1</h1> <!-- Comme les logiciels de traitements de texte, on a des titres de différents niveaux, de 1 à 6 -->
+		<img src="img/sorbonne-nouvelle-devise-trapezes.png" width="40%">
 
-		<!-- La balise <p> permet de créer des paragaphes, où doit aller la majorité du texte. -->
-		<p>Du texte dans un paragraphe.</p>
-		<p>Le paragraphe d’après.</p>
+		<div class="container has-background-grey-lighter section">
 
-		<p>
-			Un lien : <a href="www.perdu.com">Cliquer ici.</a> <!-- la balise <a></a> permet d’ajouter des (hyper)liens. -->
-		</p>
+			<h1 class="title is-1 notification">Mini Projet</h1>
+			<p>Le mini projet s'effectue dans le cadre du cours Programmation et Projet Encadré (PPE1). Le code de ce cours est L7TI005-P. Ce projet est dans la continuité de la formation pluriTAL enseigné sur un ensemble de trois universités qui sont la Sorbonne Nouvelle, l'INALCO et Nanterre Université.</p>
 
-		<p>La balise <b>b</b> permet de mettre du texte en gras.</p>
-		<p>La balise <i>i</i> permet de mettre du texte en italique.</p>
-		<p>La balise <em>em</em> permet de mettre du texte en emphase.</p>
-		<p>La balise <strong>strong</strong> permet de mettre du texte en avant.</p>
+			<h2 class="subtitle is-3 notification">Présentation du <b>mini projet</b> : </h2>
+			<p>L'objectif de ce projet est de faire aux étudiants la première partie du futur projet seul. Ceci afin que les professseurs, M.Dupont et M.Magistry s'assurent que chacun ait essayé et compris les débuts et bases du projet encadré.</p>
 
-		<ul> <!-- ul pour les liste à point -->
-			<li>élément 1</li>
-			<li>élément B</li>
-		</ul>
+			<h2 class="subtitle is-3 notification">Le <b>projet encadré</b> :</h2>
+			<p>Le projet encadré se fait en groupe de trois étudiants. Chaque étudiant se devra de maitrisé au moins une langue différente de celle de ses camarades de groupe. Il etait bénéfique de former un groupe de trois personnes provenant de trois université différentes. Ceci afin que chacun puisse apporter des connaissances qui lui sont propre aux autres.</p>
+			<p>Dans le cadre du projet, chaque groupe choisi un terme qu'il serait interessant d'étudier dans les trois langues. Les utilisations de ce mot seront ensuite comparées par le biai de l'analyse de contexte dans des sites internets. Pour chaque langue, il est demandé d'analyser une cinquantaine de liens.</p>
 
-		<ol> <!-- ol pour les liste numérotées -->
-			<li>élément 1</li>
-			<li>élément B</li>
-		</ol>
+			<h3 class="subtitle is-3 notification">Comment est-il construit le mini projet ?</h3>
+			<p>Le mini projet est un entrainement des actions que les étudiants feront dans le cadre du grand projet, ceci sur la base d'un fichier txt de cinq urls. Voici les étapes principales : </p>
+			<ul>
+				<li><u>Parcourir les urls</u> avec la commande curl dans bash ;</li>
+				<li>Retrouver les éléments intéressants tels que le code HTTP, l'encodage de la page ;</li>
+				<li>Placer ces informations dans un <u>format tabulé</u> ;</li>
+				<li>Transformer ces lignes tabulés en <u>format tableau dans un fichier HTML</u> ;</li>
+				<li>Le tout grâce à un <u>script bash</u> qui est lancé dans le terminal.</li>
+			</ul>
 
-		<p>Écrire certains caractères demande des entités HTML :</p>
-		<ul>
-			<li><i>&amp;amp;</i> pour écrire &amp;</li>
-			<li><i>&amp;lt;</i> pour écrire &lt;</li>
-			<li><i>&amp;gt;</i> pour écrire &gt;</li>
-		</ul>
-
-		<!-- on peut insérer du CSS directement dans la balise pour en changer le style -->
-		<p style="color:red; background-color:black;">Paragraphe rouge sur fond noir.</p>
+			<p>Voici le lien renvoyant vers le <a href="mini-projet/tableaux/tableau-fr.html">Tableau html du mini projet</a> .</p>
+		</div>
+		</br>
 	</body>
 </html>
